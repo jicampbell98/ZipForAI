@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\shell\ZipForAI]
+@="🧠 Zip this for AI"
+"Icon"="C:\\ZipForAI\\dist\\zipforai.exe"
+
+[HKEY_CLASSES_ROOT\Directory\shell\ZipForAI\command]
+@="\"C:\\ZipForAI\\dist\\zipforai.exe" \"%1\""

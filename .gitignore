@@ -38,3 +38,11 @@ pyarmor_runtime_*/
 
 # Ignore generated zips
 *_forAI.zip
+
+# Inno Setup output
+installer/dist/
+zipforai_setup.exe
+
+# Catch nested dist/ or build/ dirs (e.g., installer/dist)
+**/dist/
+**/build/

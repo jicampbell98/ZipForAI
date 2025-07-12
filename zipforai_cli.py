@@ -1,3 +1,9 @@
+"""
+ZipForAI – create a clean ZIP of a project folder for sharing with AI tools.
+Designed to be called from a Windows right-click context-menu entry:
+   zipforai.exe "<folder_path>"
+"""
+
 import os
 import sys
 import fnmatch
@@ -27,7 +33,6 @@ EXCLUDED_FILES = {
     "*.png", "*.jpg", "*.jpeg", "*.gif", "*.mp4", "*.zip",
 }
 
-# ── helpers ──────────────────────────────────────────────────
 match = fnmatch.fnmatch
 
 
@@ -67,7 +72,7 @@ def zip_project(folder_path: str) -> str:
 # ── CLI entry ────────────────────────────────────────────────
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: zipforai.exe <folder_to_zip>")
+        print("Usage: zipforai.exe <folder_to_zip>  (usually invoked via right-click)")
         sys.exit(1)
 
     try:
