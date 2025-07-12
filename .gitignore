@@ -1,0 +1,40 @@
+# Python bytecode/cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Package metadata
+*.egg-info/
+*.dist-info/
+
+# PyInstaller output
+*.spec
+dist/
+build/
+*.exe
+
+# Logs, dumps, and temp files
+*.log
+*.sqlite*
+*.db
+*.tmp
+
+# macOS & Windows
+.DS_Store
+Thumbs.db
+
+# IDE/editor folders
+.vscode/
+.idea/
+
+# PyArmor or other protection tools
+pyarmor_runtime_*/
+
+# Ignore generated zips
+*_forAI.zip

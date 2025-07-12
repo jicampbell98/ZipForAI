@@ -1,21 +1,27 @@
+import os
 import sys
-from .zipper import zip_project
+from pathlib import Path
 
-def main():
-    print("🟡 ZipForAI is starting...")  # DEBUG line
+# ── Ensure “zipper.py” is importable, even inside the bundled EXE ────────────
+current_dir = Path(__file__).resolve().parent
+if str(current_dir) not in sys.path:
+    sys.path.insert(0, str(current_dir))
 
+import zipper  
+
+
+def main() -> None:
     if len(sys.argv) != 2:
-        print("Usage: python -m app <folder_path>")
+        print("Usage: zipforai.exe <folder_path>")
         sys.exit(1)
 
-    folder_path = sys.argv[1]
-    print(f"📁 Input folder: {folder_path}")  # DEBUG line
-
+    folder = sys.argv[1]
     try:
-        zip_project(folder_path)
-    except Exception as e:
-        print(f"❌ Error: {e}")
+        zipper.zip_project(folder)
+    except Exception as err:
+        print(f"❌ Error: {err}")
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()
